@@ -18,6 +18,7 @@ export class FormDialogRegisterComponent {
   public usuario:Usuario =new Usuario(0, '','','','',0,'','','',0,0,'');
   alunos:Array<Usuario> = [];
 
+
   constructor( public dialogRef: MatDialogRef<FormDialogRegisterComponent>
     , private authService:AuthService,  private _usuarioService:UsuarioCrudService) {
   }
@@ -80,5 +81,10 @@ export class FormDialogRegisterComponent {
       console.log(this.encryptPassword("senha"));
       console.log("senha descriptografada")
       console.log("aqui"+ this.decryptPassword("U2FsdGVkX1/SEcJ000NESJ7b3KeHmCwXE0zLXqN9BhM="))
+    }
+
+    verificarPadrao(texto: string): boolean {
+        const regex = /[A-Za-z@#]/;
+        return regex.test(texto);
     }
 }

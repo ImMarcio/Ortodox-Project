@@ -2,40 +2,52 @@
   <mat-card-title>Cadastro</mat-card-title>
   <mat-card-content>
     <mat-form-field appearance="fill">
-      <input matInput [(ngModel)]="usuario.nome" placeholder="Digite o nome">
+      <input matInput  [(ngModel)]="usuario.nome" placeholder="Digite o nome">
+      <div *ngIf="usuario.nome.length > 45" class="error-label"> Nome grande demais!!</div>
     </mat-form-field>
     <br>
     <mat-form-field appearance="fill">
       <input matInput [(ngModel)]="usuario.email" placeholder="Digite o email">
     </mat-form-field>
+    <div *ngIf="usuario.email.length > 45" class="error-label"> email grande demais!!</div>
     <br>
     <mat-form-field appearance="fill">
       <input matInput [(ngModel)]="usuario.idade" placeholder="Digite a idade">
     </mat-form-field>
+
     <mat-form-field appearance="fill">
       <input matInput [(ngModel)]="usuario.endereco" placeholder="Digite seu endereço">
     </mat-form-field>
+    <div *ngIf="usuario.endereco.length > 45" class="error-label"> endereco grande demais!!</div>
     <mat-form-field appearance="fill">
       <input matInput [(ngModel)]="usuario.religiao" placeholder="Digite sua religiao">
     </mat-form-field>
+    <div *ngIf="usuario.religiao.length > 45" class="error-label"> String grande demais!!</div>
     <mat-form-field appearance="fill">
       <input matInput [(ngModel)]="usuario.ideologiaPolitica" placeholder="Digite sua ideologia política">
     </mat-form-field>
+    <div *ngIf="usuario.ideologiaPolitica.length > 45" class="error-label">  String grande demais!!</div>
     <mat-form-field appearance="fill">
       <input matInput [(ngModel)]="usuario.profissao" placeholder="Digite sua profissão">
     </mat-form-field>
+    <div *ngIf="usuario.profissao.length > 45" class="error-label">  String grande demais!!</div>
     <mat-form-field appearance="fill">
       <input matInput [(ngModel)]="usuario.numeroFilhos" placeholder="quantos filhos você tem?">
     </mat-form-field>
+
     <mat-form-field appearance="fill">
       <input matInput [(ngModel)]="usuario.rendaFamiliar" placeholder="Digite sua renda">
     </mat-form-field>
+
     <mat-form-field appearance="fill">
       <input matInput [(ngModel)]="usuario.grauFormacao" placeholder="Digite seu grau de formação">
     </mat-form-field>
+    <div *ngIf="usuario.profissao.length > 45" class="error-label">  String grande demais!!</div>
     <mat-form-field appearance="fill">
       <input matInput [(ngModel)]="usuario.senha" placeholder="Digite sua senha">
     </mat-form-field>
+    <div *ngIf="usuario.senha.length > 3" >
+    <div *ngIf="!verificarPadrao(usuario.senha)  " class="error-label">  Senha muito fraca :(</div></div>
   </mat-card-content>
 
   <button (click)="mostrarCriptografia()">aqui</button>

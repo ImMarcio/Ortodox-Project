@@ -3,6 +3,8 @@ import { Usuario } from 'src/app/shared/modelo/usuario';
 import {ActivatedRoute, Router} from "@angular/router";
 import {UsuarioCrudService} from "../../shared/services/usuario-crud.service";
 
+// @ts-ignore
+import * as CryptoJS from 'crypto-js';
 @Component({
   selector: 'app-manter-usuario',
   templateUrl: './manter-usuario.component.html',
@@ -34,6 +36,7 @@ export class ManterUsuarioComponent {
 
   manter(): void {
     if (this.estahCadastrando && this.usuarioDeManutencao) {
+      this.usuarioDeManutencao.senha = this.encryptPassword(this.usuarioDeManutencao.senha)
       this.usuarioService.inserir(this.usuarioDeManutencao).subscribe(
          usuarioInserido => console.log('Usuário cadastrado com sucesso!')
       );
@@ -47,5 +50,15 @@ export class ManterUsuarioComponent {
     this.nomeBotaoManutencao = 'Cadastrar';
 
     this.roteador.navigate(['listagemusuarios']);
+  }
+  encryptPassword(password: string ): string {
+    return CryptoJS.AES.encrypt(password, "admin").toString();
+
+  }
+
+// Função para descriptografar a senha, tenho que passar a senha agora criptografada para ele descriptografar
+  decryptPassword(encryptedPassword: string ): string {
+    const bytes = CryptoJS.AES.decrypt(encryptedPassword, "admin");
+    return bytes.toString(CryptoJS.enc.Utf8);
   }
 }

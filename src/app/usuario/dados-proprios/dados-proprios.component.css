@@ -1,7 +1,12 @@
 
+.card-main{
 
+
+}
 .card-cadastro {
     background-color: cornflowerblue;
     width: 300px;
     margin: 10px;
+    margin-left: 100px;
+
 }
