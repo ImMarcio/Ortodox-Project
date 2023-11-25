@@ -5,6 +5,9 @@ import {AuthService} from "../../shared/services/auth.service";
 import {UsuarioCrudService} from "../../shared/services/usuario-crud.service";
 import {Usuario} from "../../shared/modelo/usuario";
 
+// @ts-ignore
+import * as CryptoJS from 'crypto-js';
+
 
 @Component({
   selector: 'app-form-dialog-register',
@@ -48,6 +51,7 @@ export class FormDialogRegisterComponent {
   }
   cadastrar(): void {
     this.usuario.id = this.alunos.length + 1;
+    this.usuario.senha = this.encryptPassword(this.usuario.senha)
     this._usuarioService.inserir(this.usuario)
       .subscribe(
         (response) => {
@@ -60,4 +64,21 @@ export class FormDialogRegisterComponent {
     this.dialogRef.close();
 
   }
+    //funciona corretamente
+    encryptPassword(password: string ): string {
+        return CryptoJS.AES.encrypt(password, "admin").toString();
+
+    }
+
+// Função para descriptografar a senha, tenho que passar a senha agora criptografada para ele descriptografar
+    decryptPassword(encryptedPassword: string ): string {
+        const bytes = CryptoJS.AES.decrypt(encryptedPassword, "admin");
+        return bytes.toString(CryptoJS.enc.Utf8);
+    }
+    mostrarCriptografia(){
+      console.log("senha criptograda")
+      console.log(this.encryptPassword("senha"));
+      console.log("senha descriptografada")
+      console.log("aqui"+ this.decryptPassword("U2FsdGVkX1/SEcJ000NESJ7b3KeHmCwXE0zLXqN9BhM="))
+    }
 }

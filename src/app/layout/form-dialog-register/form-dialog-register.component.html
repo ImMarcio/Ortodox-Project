@@ -37,6 +37,8 @@
       <input matInput [(ngModel)]="usuario.senha" placeholder="Digite sua senha">
     </mat-form-field>
   </mat-card-content>
+
+  <button (click)="mostrarCriptografia()">aqui</button>
   <mat-card-actions class="card-action">
     <button mat-raised-button color="primary" (click)="cadastrar()">Cadastrar!</button>
   </mat-card-actions>
