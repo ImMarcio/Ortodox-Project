@@ -1,0 +1,43 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "NapoliPuto",
+      "endereco": "rua projetada",
+      "senha": "1234",
+      "idade": "20",
+      "religiao": "Nazista",
+      "ideologiaPolitica": "centro",
+      "profissao": "programmer",
+      "numeroFilhos": "2",
+      "rendaFamiliar": "200",
+      "grauFormacao": "superior"
+    },
+    {
+      "id": 2,
+      "email": "marcio@gmail.com",
+      "nome": "Marcio Jose da Silva",
+      "endereco": "rua projetada",
+      "senha": "1234",
+      "idade": "20",
+      "religiao": "Crista",
+      "ideologiaPolitica": "centro",
+      "profissao": "Programador",
+      "numeroFilhos": "20000",
+      "rendaFamiliar": "2",
+      "grauFormacao": "Engenharia de Software"
+    }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "senha": "admin"
+    },
+    {
+      "id": 2,
+      "email": "paiva@gmail.com",
+      "senha": "admin"
+    }
+  ]
+}

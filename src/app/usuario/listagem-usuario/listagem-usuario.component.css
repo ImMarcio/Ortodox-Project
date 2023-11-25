@@ -1,0 +1,11 @@
+.card-main{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.card-usuario {
+  background-color: aliceblue;
+  width: 300px;
+  margin: 10px;
+}

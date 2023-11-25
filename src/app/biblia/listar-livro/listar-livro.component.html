@@ -1,0 +1,16 @@
+
+<div class="card-main">
+</div>
+<div >
+  <mat-card  class="card-usuario" >
+    <mat-card-header>
+      <mat-card-title>{{versoRandom.book.name }}</mat-card-title>
+      <mat-card-subtitle >{{versoRandom.book.author}} - {{versoRandom.book.group}} </mat-card-subtitle>
+      <mat-card-content class="content">
+        {{versoRandom.text}}
+      </mat-card-content>
+    </mat-card-header>
+  </mat-card>
+
+  <button mat-button (click)="gerarVersiculo()">Gerar Vesículo</button>
+</div>

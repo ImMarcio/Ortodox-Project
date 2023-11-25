@@ -1,0 +1,44 @@
+<mat-card class="card-main">
+  <mat-card-title>Cadastro</mat-card-title>
+  <mat-card-content>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="usuario.nome" placeholder="Digite o nome">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="usuario.email" placeholder="Digite o email">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="usuario.idade" placeholder="Digite a idade">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="usuario.endereco" placeholder="Digite seu endereço">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="usuario.religiao" placeholder="Digite sua religiao">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="usuario.ideologiaPolitica" placeholder="Digite sua ideologia política">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="usuario.profissao" placeholder="Digite sua profissão">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="usuario.numeroFilhos" placeholder="quantos filhos você tem?">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="usuario.rendaFamiliar" placeholder="Digite sua renda">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="usuario.grauFormacao" placeholder="Digite seu grau de formação">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="usuario.senha" placeholder="Digite sua senha">
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions class="card-action">
+    <button mat-raised-button color="primary" (click)="cadastrar()">Cadastrar!</button>
+  </mat-card-actions>
+
+</mat-card>

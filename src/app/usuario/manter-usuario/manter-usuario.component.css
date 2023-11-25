@@ -1,0 +1,8 @@
+.card-cadastro {
+  background-color: cornflowerblue;
+  width: 300px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}

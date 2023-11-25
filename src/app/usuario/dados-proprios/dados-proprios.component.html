@@ -1,0 +1,38 @@
+<mat-card class="card-cadastro">
+    <mat-card-content>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="usuarioDeManutencao.nome" placeholder="Digite o nome">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="usuarioDeManutencao.idade" placeholder="Digite a idade">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="usuarioDeManutencao.endereco" placeholder="Digite seu endereço">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="usuarioDeManutencao.religiao" placeholder="Digite sua religiao">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="usuarioDeManutencao.ideologiaPolitica" placeholder="Digite sua ideologia política">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="usuarioDeManutencao.profissao" placeholder="Digite sua profissão">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="usuarioDeManutencao.numeroFilhos" placeholder="quantos filhos você tem?">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="usuarioDeManutencao.rendaFamiliar" placeholder="Digite sua renda">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="usuarioDeManutencao.grauFormacao" placeholder="Digite seu grau de formação">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <input matInput [(ngModel)]="usuarioDeManutencao.senha" placeholder="Digite sua senha">
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="salvar()">salvar</button>
+    </mat-card-actions>
+</mat-card>
