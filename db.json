@@ -3,7 +3,7 @@
     {
       "id": 2,
       "email": "marcio@gmail.com",
-      "nome": "Marcio Jose da Silva",
+      "nome": "Marcio Jose da Silva-editado",
       "endereco": "rua projetada",
       "senha": "1234",
       "idade": "20",
@@ -16,15 +16,15 @@
     },
     {
       "id": 3,
-      "email": "test2@gmail.com",
-      "nome": "Marcio Jose",
+      "email": "test3@gmail.com",
+      "nome": "Marcio-test2",
       "endereco": "rua",
-      "senha": "U2FsdGVkX185vMxYI///uS0/5mFa3ZuxOFVW9qYwZVA=",
+      "senha": "U2FsdGVkX1+r23kVrBaIW0WBvLDw1K/gPyRzNIaeRKM=",
       "idade": "20",
-      "religiao": "crista",
-      "ideologiaPolitica": "centro",
-      "profissao": "programador",
-      "numeroFilhos": "2000",
+      "religiao": "Cristão",
+      "ideologiaPolitica": "Centro",
+      "profissao": "Programador",
+      "numeroFilhos": "20000",
       "rendaFamiliar": "2",
       "grauFormacao": "superior"
     }
